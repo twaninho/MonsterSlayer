@@ -10,7 +10,15 @@ const app = Vue.createApp({
     };
   },
 
-  computed: {},
+  computed: {
+    monsterBarStyles() {
+      return { width: this.monsterHealth + "%" };
+    },
+
+    playerBarStyles() {
+      return { width: this.playerHealth + "%" };
+    },
+  },
 
   methods: {
     attackMonster() {
